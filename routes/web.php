@@ -1,10 +1,18 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
+});
+
+Route::resource('usuarios', UsuariosController::class)
+->middleware('auth');
+
+Route::fallback(function(){
+    return view('home');;
 });
 
 Route::get('/dashboard', function () {
