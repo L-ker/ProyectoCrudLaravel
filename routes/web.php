@@ -4,9 +4,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// })->name('home');
+Route::view("/","home")->name("home");
 
 Route::resource('usuarios', UsuariosController::class)
 ->middleware('auth');
