@@ -4,3 +4,5 @@ Añadido docker, migraciones hechas, todo updateado y instalado, listo para come
 Cambiada la / a una pagina llamada home
 
 Añadido controlador usuarios, cambiadas rutas y creado un boceto del home
+
+Loguearse lleva al Home en vez de al dashboard
