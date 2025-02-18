@@ -27,6 +27,21 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
+                // Validar los datos de la solicitud
+                // $validatedData = $request->validate([
+                //     'nombre' => 'required|string|max:255',
+                //     'usuario' => 'required|string|max:255|unique:usuarios',
+                //     'email' => 'required|string|email|max:255|unique:usuarios',
+                //     'password' => 'required|string|min:8',
+                // ]);
+        
+                // // Encriptar la contraseña
+                // $validatedData['password'] = Hash::make($validatedData['password']);
+        
+                // // Crear un nuevo usuario
+                // $usuario = Usuario::create($validatedData);
+        
+                // return response()->json($usuario, 201);
         //
     }
 
