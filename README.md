@@ -14,9 +14,12 @@ Migracion de usuarios creada, tengo de idea para los usuarios que la contraseña
 
 Cambiada la fuente y cambiado bastante el home, que se muestre bien el usuario, que no sobre un logout y un carrousel chulo con imagenes del juego de mesa 
 
+Cambios en el nav, migracion y puntuaciones creadas
+
 TODO:
-hacer los metodos y crear las paginas de usuarios
-seeder usuarios
+hacer los metodos y crear las paginas de usuarios y de puntuaciones
+migracion puntuaciones
+seeder usuarios y puntuaciones
 mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer)
 
 Planteando una segunda tabla para hacer la relacion, como mi proyecto sera un juego de mesa estoy pensando en añadir algo de una tabla de maxima puntuacion de cada usuario y quizas algo de puntuacion total, ademas podria agregar una tabla con un top de los mejores usuarios
