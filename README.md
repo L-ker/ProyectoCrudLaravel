@@ -12,6 +12,8 @@ Creado el modelo y el controlador de los usuarios, el controlador fue creado con
 
 Migracion de usuarios creada, tengo de idea para los usuarios que la contraseña se guarde y muestre siempre encriptada pero que exista una contraseña especial para administradores para poder ver las contraseñas desencriptadas
 
+Cambiada la fuente y cambiado bastante el home, que se muestre bien el usuario, que no sobre un logout y un carrousel chulo con imagenes del juego de mesa 
+
 TODO:
 hacer los metodos y crear las paginas de usuarios
 seeder usuarios

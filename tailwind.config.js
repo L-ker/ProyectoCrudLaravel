@@ -12,7 +12,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                mono: ['ui-monospace', 'SFMono-Regular'],
             },
             height: {
                 "10v":"10vh",
