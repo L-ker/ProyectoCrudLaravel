@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
 
 class UsuariosController extends Controller
 {
@@ -11,7 +12,11 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        $campos = Schema::getColumnListing('usuarios');
+        $exclude =["created_at","updated_at"];
+        $campos = array_diff($campos,$exclude);
+        $filas = Usuarios::select($campos)->get();
+        return view('usuarios.index',compact('filas',"campos"));
     }
 
     /**

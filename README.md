@@ -16,10 +16,10 @@ Cambiada la fuente y cambiado bastante el home, que se muestre bien el usuario, 
 
 Cambios en el nav, migracion y puntuaciones creadas
 
-TODO:
-hacer los metodos y crear las paginas de usuarios y de puntuaciones
-migracion puntuaciones
-seeder usuarios y puntuaciones
-mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer)
+Ya se muestra en el usuarios.index los usuarios pero hay que cambiar casi todo el usuarios index y hacer el resto que todavia faltan, tambien esta hecho el factory y el seeder de usuarios faltaria de puntuaciones
 
-Planteando una segunda tabla para hacer la relacion, como mi proyecto sera un juego de mesa estoy pensando en añadir algo de una tabla de maxima puntuacion de cada usuario y quizas algo de puntuacion total, ademas podria agregar una tabla con un top de los mejores usuarios
+TODO:
+Modificar tabla usuarios para que este bien relacionada con puntuaciones (cuando todo el tema de puntuaciones este hecho)
+Acabar metodos del controlador de usuarios y puntuaciones y sus respectivas paginas
+migracion, seeder y factory de puntuaciones
+mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
