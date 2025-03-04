@@ -1,8 +1,10 @@
 <!-- HEADER DE MOVIL -->
 <header class="md:hidden bg-flame flex flex-col justify-center items-center py-2 space-y-1">
- <img class="h-3/5">
+<a href="{{ route("home") }}"> 
+<img class="h-3/5">
  header para moviles
  </img>
+</a>
  </header>
  
  <!-- HEADER DE DESKTOP -->
