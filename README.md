@@ -20,6 +20,6 @@ Ya se muestra en el usuarios.index los usuarios pero hay que cambiar casi todo e
 
 TODO:
 Modificar tabla usuarios para que este bien relacionada con puntuaciones (cuando todo el tema de puntuaciones este hecho)
-Acabar metodos del controlador de usuarios y puntuaciones y sus respectivas paginas
+Acabar metodos del controlador de usuarios (de este revisar lo que esta hecho tambien) y puntuaciones y sus respectivas paginas
 migracion, seeder y factory de puntuaciones
 mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
