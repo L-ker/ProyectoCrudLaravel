@@ -18,7 +18,7 @@ export default {
                 "10v":"10vh",
                 "15v":"15vh",
                 "65v":"65vh",
-                "5v":"5vh",
+                "5v":"10vh",
             },
             colors: {
                 "flame":"#D36135",

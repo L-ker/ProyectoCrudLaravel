@@ -32,22 +32,26 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-                // Validar los datos de la solicitud
-                // $validatedData = $request->validate([
-                //     'nombre' => 'required|string|max:255',
-                //     'usuario' => 'required|string|max:255|unique:usuarios',
-                //     'email' => 'required|string|email|max:255|unique:usuarios',
-                //     'password' => 'required|string|min:8',
-                // ]);
-        
-                // // Encriptar la contraseña
-                // $validatedData['password'] = Hash::make($validatedData['password']);
-        
-                // // Crear un nuevo usuario
-                // $usuario = Usuario::create($validatedData);
-        
-                // return response()->json($usuario, 201);
-        //
+        // $datos = $request->only("nombre","email","f_nac","dni");
+        // $alumno = new Alumno($datos);
+        // $alumno->save();
+
+        // if ($request->has("idiomas")){
+        //     foreach ($request->idiomas as $idioma_hablado){
+        //         $idioma = new Idioma();
+        //         $idioma->alumno_id= $alumno->id;
+        //         $idioma->idioma = $idioma_hablado;
+        //         $idioma->nivel = $request->nivel[$idioma_hablado];
+        //         $idioma->titulo = $request->titulo[$idioma_hablado];
+        //         $idioma->save();
+        //     }
+        // }
+
+        // $alumno->save();
+        // session()->flash("mensaje","Alumno $alumno->nombre registrado");
+
+        // return redirect()->route('alumnos.index');
+        // //
     }
 
     /**
@@ -55,7 +59,7 @@ class UsuariosController extends Controller
      */
     public function show(Usuarios $usuario)
     {
-        // return view('alumnos.show',compact('usuario'));
+        return view('usuarios.show',compact('usuario'));
     }
 
     /**
@@ -63,7 +67,7 @@ class UsuariosController extends Controller
      */
     public function edit(Usuarios $usuario)
     {
-        // return view('alumnos.edit',compact('usuario'));   
+        return view('usuarios.edit',compact('usuario'));   
     }
 
     /**
@@ -71,14 +75,18 @@ class UsuariosController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // $alumno->update($request->input());
+        // session()->flash("mensaje","Alumno $alumno->nombre actualizado");
+        // return redirect()->route('alumnos.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Usuarios $usuario)
     {
-        //
+        $usuario->delete();
+        session()->flash("mensaje","Alumno $usuario->nombre eliminado");
+        return redirect()->route('usuarios.index');
     }
 }

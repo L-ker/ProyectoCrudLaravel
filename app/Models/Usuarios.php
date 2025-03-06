@@ -10,7 +10,7 @@ class Usuarios extends Model
     use HasFactory;
     public $fillable=["nombre","usuario","email","password"];
 
-    public function idiomas(){
+    public function puntuaciones(){
         return $this->hasMany(Idioma::class);
     }
 }

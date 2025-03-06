@@ -8,7 +8,7 @@
  </header>
  
  <!-- HEADER DE DESKTOP -->
- <header class="hidden md:flex h-24 bg-flame flex flex-row justify-between px-3 py-1 items-center">
+ <header class="hidden md:flex h-15v bg-flame flex flex-row justify-between px-3 py-1 items-center">
  <img class="w-28 md:w-36 lg:w-44 max-h-[90%] h-auto" src="{{ asset('images/logo.png') }}" alt="logo">
     <h1 class = "hidden md:block text-white text-5xl" >GESTION USUARIOS</h1>
     <div>
