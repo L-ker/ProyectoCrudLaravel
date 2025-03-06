@@ -24,3 +24,8 @@ TODO:
 Acabar metodos del controlador de usuarios (de este revisar lo que esta hecho tambien) y puntuaciones y sus respectivas paginas
 migracion, seeder y factory de puntuaciones
 mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
+en el edit asegurarse de añadir sweet alert
+comprobar que esta bien el tema de la relacion 1/N
+Recordar validar que los campos no esten vacios, un regex por ejemplo
+Añadir variables de sesion con mensajes a insertar y actualizar
+añadir el tema de los idiomas
