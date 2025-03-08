@@ -1,7 +1,7 @@
 <x-layouts.layout>
     <div class="flex justify-center items-center min-h-full bg-indigoDye">
         <div class="bg-lapisLazuli rounded-2xl p-5 w-full max-w-4xl">
-            <h2 class="text-xl font-bold text-white mb-4">Detalles de la Puntuación</h2>
+        <h2 class="text-xl font-bold text-white mb-4 text-center">Detalles de la puntuacion</h2>
             <table class="w-full text-white border-collapse border border-gray-500">
                 <tr>
                     <th class="border border-gray-500 p-2 text-left">ID</th>
