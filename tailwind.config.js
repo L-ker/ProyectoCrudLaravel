@@ -16,8 +16,10 @@ export default {
             },
             height: {
                 "10v":"10vh",
+                "20v":"20vh",
                 "15v":"15vh",
                 "65v":"65vh",
+                "75v":"75vh",
                 "5v":"10vh",
             },
             colors: {

@@ -12,7 +12,7 @@
     <select onchange="window.location.href=this.value" class="bg-black text-white p-2 rounded focus:outline-none w-32 appearance-none">
     @foreach(config('languages') as $locale => $language)
         <option value="{{ route('language', $locale) }}" {{ App::getLocale() == $locale ? 'selected' : '' }}>
-            {{ __($language['name']) }} {!! $language['flag'] !!}
+            {{ $language['name'] }} {!! $language['flag'] !!}
         </option>
     @endforeach
     </select>

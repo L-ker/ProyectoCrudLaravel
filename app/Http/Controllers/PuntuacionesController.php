@@ -43,7 +43,7 @@ class PuntuacionesController extends Controller
         $puntuacion = new Puntuaciones($request->input());
 
         $puntuacion->save();
-        session()->flash("mensaje","La puntuacion $puntuacion->id ha sido registrado");
+        session()->flash("mensaje",__('La puntuacion') .' '. $puntuacion->id  .''. __('ha sido registrado'));
 
         return redirect()->route('puntuaciones.index');    }
 
@@ -77,7 +77,7 @@ class PuntuacionesController extends Controller
             'usuarios_id' => $request->input('usuarios_id'),
         ]);
         
-        session()->flash("mensaje","La puntuacion $puntuacion->id ha sido actualizado");
+        session()->flash("mensaje",__('La puntuacion') .' '. $puntuacion->id .''. __('ha sido actualizado'));
         return redirect()->route('puntuaciones.index');
     }
 
@@ -87,7 +87,7 @@ class PuntuacionesController extends Controller
     public function destroy(Puntuaciones $puntuacion)
     {
         $puntuacion->delete();
-        session()->flash("mensaje","La puntuacion $puntuacion->id ha sido eliminada");
+        session()->flash("mensaje",__('La puntuacion') .' '. $puntuacion->id .''. __('ha sido eliminada'));
         return redirect()->route('puntuaciones.index');
     }
 }

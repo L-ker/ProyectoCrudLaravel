@@ -1,9 +1,9 @@
 <?php
 return [
-    'es' => ['name' => 'Spanish',
+    'es' => ['name' => 'Español',
             'flag' => '🇪🇸'],
     'en' => ['name' => 'English',
             'flag' => '🇬🇧'],
-    'ja' => ['name' => 'Japanese',
+    'ja' => ['name' => '日本語',
             'flag' => '🇯🇵']
 ];

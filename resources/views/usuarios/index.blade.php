@@ -1,6 +1,6 @@
 <x-layouts.layout>
     @if (session("mensaje"))
-        <div id="message" role="alert" class="alert alert-success">
+        <div id="message" role="alert" class="alert alert-info">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6 shrink-0 stroke-current"
@@ -74,12 +74,12 @@
     <script>
         function confirmDelete(id) {
             Swal.fire({
-                title: '¿Estás seguro?',
-                text: 'Esta acción no se puede deshacer.',
+                title: '{{__('¿Estás seguro?')}}',
+                text: '{{__('Esta acción no se puede deshacer.')}}',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Sí, eliminar',
-                cancelButtonText: 'Cancelar',
+                confirmButtonText: '{{ __('Sí, eliminar')}}',
+                cancelButtonText: '{{__('Cancelar')}}',
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {

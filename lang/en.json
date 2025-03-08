@@ -109,5 +109,14 @@
     "volver" : "return",
     "usuarios_id" : "users_id",
     "puntuaciones" : "scores",
-    "" : ""
+    "¿Estás seguro?" : "¿Are you sure?",
+    "¿Deseas guardar los cambios en este usuario?" : "¿Do you wish to save the changes made on this user?",
+    "Sí, guardar" : "Yes, save",
+    "Cancelar" : "Cancel",
+    "Esta acción no se puede deshacer." : "This action can not be undone",
+    "Sí, eliminar" : "Yes, delete",
+    "El usuario" : "The user",
+    "ha sido registrado" : "has been registered",
+    "ha sido actualizado" : "has been updated",
+    "ha sido eliminado" : "has been deleted"
 }

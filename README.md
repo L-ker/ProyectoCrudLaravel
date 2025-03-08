@@ -36,18 +36,4 @@ Añadido select al footer para cambiar entre idiomas
 
 Practicamente el 100% de la pagina ha sido traducida solo faltan validaciones, mensajes de session que ademas quiero cambiarlos un poco a ser posible y los sweet alerts antes de borrar y editar
 
-TODO:
-3 idiomas {
-    VALIDACIONES
-
-    Mensajes de session {
-        relacionados con el index
-    }
-    Alertas antes de antes de borrar y editar {
-        borrar editar
-    }
-}
-mi funcion extra?: Hacer responsive {
-    Header: solo el titulo (GESTION USUARIOS) y un menu amburguesa con todas las paginas que estaban en el nav que obviamente se irá borrado
-    No mostrar los svg (posiblemente lo de copyright tampoco) en el footer porque lo principal es el select de idiomas
-}
+Mas traducciones, arreglado un problema de que en el logout te mandaba al dashboard, cambiado el color de las alertas de daisyui que se mostraban con los mensajes de sesion, cambiado los idiomas porque no tenia sentido que se tradujesen, ahora cada idioma sale en el select como se escribe en su idioma, el header cambia si estas en desktop o en movil y la pagina es relativamente responsive, comentados los mensajes de los request porque los propios idiomas al agregarlos vienen con traducciones de validacion y arreglado algun tema en el front que habia

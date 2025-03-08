@@ -27,12 +27,12 @@ class UpdatePuntuacionRequest extends FormRequest
         ];
     }
 
-    public function messages(): array
-    {
-        return [
-            "puntuacion.required" => "La puntuacion es obligatoria",
-            "puntuacion.max" => "La puntuacion no puede exceder los 7 digitos",
-            "usuarios_id.max" => "El id de usuario es obligatorio",
-        ];
-    }
+    // public function messages(): array
+    // {
+    //     return [
+    //         "puntuacion.required" => "La puntuacion es obligatoria",
+    //         "puntuacion.max" => "La puntuacion no puede exceder los 7 digitos",
+    //         "usuarios_id.max" => "El id de usuario es obligatorio",
+    //     ];
+    // }
 }

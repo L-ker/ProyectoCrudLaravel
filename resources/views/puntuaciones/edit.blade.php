@@ -42,12 +42,12 @@
     <script>
         function confirmSubmit() {
             Swal.fire({
-                title: '¿Estás seguro?',
-                text: '¿Deseas guardar los cambios de esta puntuacion?',
+                title: '{{__('¿Estás seguro?')}}',
+                text: '{{__('¿Deseas guardar los cambios en este usuario')}}',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Sí, guardar',
-                cancelButtonText: 'Cancelar',
+                confirmButtonText: '{{__('Sí, guardar')}}',
+                cancelButtonText: '{{__('Cancelar')}}',
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {

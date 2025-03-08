@@ -29,20 +29,20 @@ class UpdateUsuarioRequest extends FormRequest
         ];
     }
 
-    public function messages(): array
-    {
-        return [
-            "nombre.required" => "El nombre es obligatorio",
-            "nombre.max" => "El nombre no puede exceder 50 caracteres",
-            "usuario.max" => "El usuario no puede exceder 25 caracteres",
-            "usuario.min" => "El usuario no puede ser mas corto de 5 caracteres",
-            "usuario.unique" => "El usuario ya está registrado",
-            "usuario.required" => "El usuario es obligatorio",
-            "email.required" => "El email es obligatorio",
-            "email.unique" => "El email ya esta registrado con otro usuario",
-            "email.max" => "El email no puede exceder 320 caracteres",
-            "password.min" => "La contraseña debe ser de minimo 8 carácteres",
-            "password.required" => "La contraseña es obligatoria",
-        ];
-    }
+    // public function messages(): array
+    // {
+    //     return [
+    //         "nombre.required" => "El nombre es obligatorio",
+    //         "nombre.max" => "El nombre no puede exceder 50 caracteres",
+    //         "usuario.max" => "El usuario no puede exceder 25 caracteres",
+    //         "usuario.min" => "El usuario no puede ser mas corto de 5 caracteres",
+    //         "usuario.unique" => "El usuario ya está registrado",
+    //         "usuario.required" => "El usuario es obligatorio",
+    //         "email.required" => "El email es obligatorio",
+    //         "email.unique" => "El email ya esta registrado con otro usuario",
+    //         "email.max" => "El email no puede exceder 320 caracteres",
+    //         "password.min" => "La contraseña debe ser de minimo 8 carácteres",
+    //         "password.required" => "La contraseña es obligatoria",
+    //     ];
+    // }
 }

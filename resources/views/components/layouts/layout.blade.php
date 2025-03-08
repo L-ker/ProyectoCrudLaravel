@@ -11,7 +11,7 @@
 <body class="flex flex-col min-h-screen h-65v">
 <x-layouts.header />
 <x-layouts.nav />
-<main class="flex-grow bg-argentinianBlue overflow-auto">
+<main>
     {{$slot}}
 </main>
 <x-layouts.footer />

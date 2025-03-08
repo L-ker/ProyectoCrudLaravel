@@ -46,7 +46,7 @@ class UsuariosController extends Controller
         $usuario = new Usuarios($request->input());
 
         $usuario->save();
-        session()->flash("mensaje","El usuario $usuario->nombre ha sido registrado");
+        session()->flash("mensaje",__('El usuario') .' '. $usuario->nombre .''. __('ha sido registrado'));
 
         return redirect()->route('usuarios.index');
     }
@@ -79,7 +79,7 @@ class UsuariosController extends Controller
         ]);
 
         $usuario->update($request->input());
-        session()->flash("mensaje","El usuario $usuario->nombre ha sido actualizado");
+        session()->flash("mensaje",__('El usuario') .' '. $usuario->nombre.''. __('ha sido actualizado'));
         return redirect()->route('usuarios.index');
     }
 
@@ -89,7 +89,7 @@ class UsuariosController extends Controller
     public function destroy(Usuarios $usuario)
     {
         $usuario->delete();
-        session()->flash("mensaje","EL usuario $usuario->nombre ha sido eliminado");
+        session()->flash("mensaje",__('El usuario') .' '. $usuario->nombre .''. __('ha sido eliminado'));
         return redirect()->route('usuarios.index');
     }
 }

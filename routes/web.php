@@ -27,7 +27,7 @@ Route::fallback(function(){
 
 Route::get('/dashboard', function () {
     return view('home');
-})->middleware(['auth', 'verified'])->name('home');
+})->middleware(['auth', 'verified'])->name('dashboard'); 
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

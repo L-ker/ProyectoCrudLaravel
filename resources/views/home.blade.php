@@ -1,5 +1,5 @@
 <x-layouts.layout >
-<div class="w-full h-[65vh] relative">
+<div class="w-full h-75v md:h-[65vh] relative">
   <div class="carousel w-full h-full">
     <div id="slide1" class="carousel-item relative w-full h-full">
       <img src="{{ asset('images/hotel1.jpg') }}" alt="{{__('imagenJuego1')}}" class="w-full h-full object-cover" />
