@@ -32,8 +32,8 @@
                 </div>
 
                 <div class="mt-4 flex justify-end gap-2">
-                    <button class="btn btn-sm btn-primary" type="submit">Guardar</button>
-                    <a class="btn btn-sm btn-danger" href="{{ route('puntuaciones.index') }}">Cancelar</a>
+                    <button class="btn btn-sm btn-primary" type="submit">{{ __('guardar') }}</button>
+                    <a class="btn btn-sm btn-primary" href="{{ route('puntuaciones.index') }}">{{ __("cancelar") }}</a>
                 </div>
             </div>
         </form>

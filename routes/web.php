@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\PuntuacionesController;
+use App\Http\Controllers\LanguageController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -16,6 +17,9 @@ Route::resource('usuarios', UsuariosController::class)
 Route::resource('puntuaciones', PuntuacionesController::class)
 ->parameter('puntuaciones', 'puntuacion')
 ->middleware('auth');
+
+Route::get('language/{locale}',
+LanguageController:: class)->name('language');
 
 Route::fallback(function(){
     return view('home');;

@@ -32,37 +32,22 @@ Hecho el show, en el show de usuarios se puede ver sus puntuaciones y en el de p
 
 añadidos idiomas, tengo que poner todas las traducciones y crear forma de cambiar de idioma (quizas en el footer?)
 
+Añadido select al footer para cambiar entre idiomas
+
+Practicamente el 100% de la pagina ha sido traducida solo faltan validaciones, mensajes de session que ademas quiero cambiarlos un poco a ser posible y los sweet alerts antes de borrar y editar
+
 TODO:
 3 idiomas {
     VALIDACIONES
-    TODA LA PAGINA
 
-    Lista palabras {
-            //GESTION USUARIOS
-            //Inicia sesión para acceder a las tablas de la base de datos
-            //PAGINA DE GESTION DE USUARIOS DEL JUEGO Y PUNTUACIONES
-            los alts {
-                //logo
-                //imagenJuego1-4
-            }
-            //Copyright
-            //All right reserved
-            //Login
-            //Register
-            //Logout
-            //Usuario:
-            //Mostrar Usuarios
-            //Crear usuario
-            //Inicio
-            //Crear puntuacion
-            //Mostrar puntuaciones
-            //Nombres de los atributos de las tablas
-            Mensajes de session
-            Alertas antes de antes de borrar y editar
-            //Detalles del Usuario
-            //Detalles de la Puntuación
+    Mensajes de session {
+        relacionados con el index
+    }
+    Alertas antes de antes de borrar y editar {
+        borrar editar
     }
 }
-Hacer responsive {
-    mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
+mi funcion extra?: Hacer responsive {
+    Header: solo el titulo (GESTION USUARIOS) y un menu amburguesa con todas las paginas que estaban en el nav que obviamente se irá borrado
+    No mostrar los svg (posiblemente lo de copyright tampoco) en el footer porque lo principal es el select de idiomas
 }
