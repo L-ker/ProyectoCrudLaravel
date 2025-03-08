@@ -17,8 +17,8 @@
     @endif
     <!-- DIV GRANDE -->
     <div class="flex flex-col h-full">
-        <div class="flex-grow overflow-x-auto bg-flame text-white">
-            <table class="table bg- table-xs table-pin-rows table-pin-cols">
+        <div class="flex-grow overflow-x-auto bg-indigoDye text-white min-h-0">
+            <table class="table table-auto w-full table-xs table-pin-rows table-pin-cols">
                 <!-- COLUMNAS -->
                 <thead>
                     <tr>
@@ -59,7 +59,8 @@
                             <td>
                                 <a href="{{ route('usuarios.show', $fila->id) }}" class="text-white hover:text-blue-600 inline-flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke="white" d="M12 4.5C7.031 4.5 3 8.25 3 12s4.031 7.5 9 7.5 9-4.75 9-7.5-4.031-7.5-9-7.5zM12 15a3 3 0="0" 0-6 3 3 0 0 0 0 6z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke="white" d="M12 4.5C7.031 4.5 3 8.25 3 12s4.031 7.5 9 7.5 9-4.75 9-7.5-4.031-7.5-9-7.5z"/>
+                                        <circle cx="12" cy="12" r="3" stroke="white" stroke-width="1.5" fill="none"/>
                                     </svg>
                                 </a>
                             </td>
@@ -70,7 +71,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function confirmDelete(id) {
             Swal.fire({
@@ -87,5 +87,9 @@
                 }
             });
         }
+
+        setTimeout(() => {
+        document.getElementById("message")?.remove();
+    }, 3000);
     </script>
 </x-layouts.layout>

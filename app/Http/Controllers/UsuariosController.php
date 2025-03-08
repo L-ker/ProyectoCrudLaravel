@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Validator;
+
 
 class UsuariosController extends Controller
 {
@@ -73,11 +76,27 @@ class UsuariosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Usuarios $usuario)
     {
-        // $alumno->update($request->input());
-        // session()->flash("mensaje","Alumno $alumno->nombre actualizado");
-        // return redirect()->route('alumnos.index');
+        $validator = Validator::make($request->all(), [
+            'nombre' => 'required|string|max:50',
+            'usuario' => 'required|string|max:25|unique:usuarios,usuario,' . $usuario->id, 
+            'email' => 'required|email|max:320|unique:usuarios,email,' . $usuario->id, 
+            'password' => 'required|string|min:8', 
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('usuarios.edit', $usuario->id)
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $request->merge([
+            'password' => Crypt::encryptString($request->password) 
+        ]);
+        $usuario->update($request->input());
+        session()->flash("mensaje","El usuario $usuario->nombre ha sido actualizado");
+        return redirect()->route('usuarios.index');
     }
 
     /**

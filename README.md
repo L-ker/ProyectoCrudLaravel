@@ -20,6 +20,10 @@ Ya se muestra en el usuarios.index los usuarios pero hay que cambiar casi todo e
 
 He estado editando el index, añadidas las sweet alerts para ya que he añadido la funcionalidad de borrar usuarios en su index y si hay mas son cambios minimos
 
+Casi acabado el edit-update de usuarios
+
+Visualmente arreglado el edit al menos en gran medida, he añadido la comprobacion de los datos por parte del servidor con el validator que proporciona laravel que tambien debo usar en el store
+
 TODO:
 Acabar metodos del controlador de usuarios (de este revisar lo que esta hecho tambien) y puntuaciones y sus respectivas paginas
 migracion, seeder y factory de puntuaciones
@@ -29,3 +33,9 @@ comprobar que esta bien el tema de la relacion 1/N
 Recordar validar que los campos no esten vacios, un regex por ejemplo
 Añadir variables de sesion con mensajes a insertar y actualizar
 añadir el tema de los idiomas
+HACER LA VERSION DE MOVIL, TODAVIA NO ES RESPONSIVE DEL TODO
+Comprobar validator update
+
+para decryptear contraseñas:
+use Illuminate\Support\Facades\Crypt;
+$password = Crypt::decryptString($usuario->password);

@@ -3,7 +3,13 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
+/**
+ * Se que Hash sería la opcion "correcta" pero en una situacion real esta aplicacion
+ * seria solo usable por administradores por lo que me gustaria que puedan ver las
+ * contraseñas deshasheadas aunque igualmente es un problema de seguridad pero elijo 
+ * hacerlo asi personalmente
+ */
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 
 /**
@@ -22,7 +28,7 @@ class UsuariosFactory extends Factory
             "nombre" => $this->faker->name(),
             "usuario" => $this->faker->userName(),
             "email" => $this->faker->unique()->safeEmail(),
-            "password" => Hash::make(Str::random(12)),
+            "password" => Crypt::encryptString(Str::random(12)),
         ];
     }
 }
