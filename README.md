@@ -26,19 +26,13 @@ Visualmente arreglado el edit al menos en gran medida, he añadido la comprobaci
 
 He cambiado de validar con el Validator a usar las request porque me parece mas correcto y ademas puedes editar los mensajes de manera facil. Tambien he añadido el sweet alert a editar 
 
-Migracion,seeder y factory de puntuaciones hecho. Index de puntuaciones hecho,
+Migracion,seeder y factory de puntuaciones hecho. Index,edit, create y delete de puntuaciones hechos
+
+Hecho el show, en el show de usuarios se puede ver sus puntuaciones y en el de puntuaciones se ve los datos del usuario con el que esta relacionado
 
 TODO:
 3 idiomas
- Hacer responsive {
+Hacer responsive {
     mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
 }
-Relacionado con la tabla 1/n {
-    Acabar metodos del controlador de usuarios (de este revisar lo que esta hecho tambien) y puntuaciones y sus respectivas paginas
-
-    para decryptear contraseñas:
-    use Illuminate\Support\Facades\Crypt;
-    $password = Crypt::decryptString($usuario->password);    
-}
-Metodos de ver para en los que se muestre relacionadas las tablas
 Api a ser posible

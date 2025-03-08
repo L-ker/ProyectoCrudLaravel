@@ -11,7 +11,7 @@ class StorePuntuacionRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,17 @@ class StorePuntuacionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'puntuacion' => 'required|string|max:7',
+            'usuarios_id' => 'required', 
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            "puntuacion.required" => "La puntuacion es obligatoria",
+            "puntuacion.max" => "La puntuacion no puede exceder los 7 digitos",
+            "usuarios_id.max" => "El id de usuario es obligatorio",
         ];
     }
 }

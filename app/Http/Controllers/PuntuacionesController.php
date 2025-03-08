@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePuntuacionRequest;
 use App\Http\Requests\UpdatePuntuacionRequest;
 use App\Models\Puntuaciones;
+use App\Models\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Crypt;
@@ -29,7 +30,9 @@ class PuntuacionesController extends Controller
      */
     public function create()
     {
-        return view("puntuaciones.create");
+        $usuarios = Usuarios::select('id', 'usuario')->orderBy('id', 'asc')->get();
+
+        return view('puntuaciones.create',compact('usuarios'));   
     }
 
     /**
@@ -49,15 +52,19 @@ class PuntuacionesController extends Controller
      */
     public function show(Puntuaciones $puntuacion)
     {
-        return view('puntuaciones.show',compact('puntuacion'));
+        $usuario = $puntuacion->usuario;
+        return view('puntuaciones.show', compact('puntuacion', 'usuario'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Puntuaciones $puntuacion)
     {
-        return view('puntuaciones.edit',compact('puntuacion'));   
+        $usuarios = Usuarios::select('id', 'usuario')->orderBy('id', 'asc')->get();
+
+        return view('puntuaciones.edit',compact('puntuacion', 'usuarios'));   
     }
 
     /**
@@ -65,7 +72,11 @@ class PuntuacionesController extends Controller
      */
     public function update(UpdatePuntuacionRequest $request, Puntuaciones $puntuacion)
     {
-        $puntuacion->update($request->input());
+        $puntuacion->update([
+            'puntuacion' => $request->input('puntuacion'),
+            'usuarios_id' => $request->input('usuarios_id'),
+        ]);
+        
         session()->flash("mensaje","La puntuacion $puntuacion->id ha sido actualizado");
         return redirect()->route('puntuaciones.index');
     }

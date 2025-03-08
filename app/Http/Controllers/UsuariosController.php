@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreUsuarioRequest;
 use App\Http\Requests\UpdateUsuarioRequest;
 use App\Models\Usuarios;
+use App\Models\Puntuaciones;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Crypt;
@@ -55,7 +56,9 @@ class UsuariosController extends Controller
      */
     public function show(Usuarios $usuario)
     {
-        return view('usuarios.show',compact('usuario'));
+        $puntuaciones = $usuario->puntuaciones()->get();
+
+        return view('usuarios.show', compact('usuario', 'puntuaciones'));
     }
 
     /**

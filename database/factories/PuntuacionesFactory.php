@@ -18,7 +18,7 @@ class PuntuacionesFactory extends Factory
     public function definition(): array
     {
         return [
-            'puntuacion' => $this->faker->numberBetween(5000, 1000000),
+            'puntuacion' => $this->faker->numberBetween(5000, 9999999),
             'usuarios_id' => Usuarios::factory(), 
         ];
     }
