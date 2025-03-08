@@ -38,24 +38,29 @@ TODO:
     TODA LA PAGINA
 
     Lista palabras {
-            GESTION USUARIOS
-            Inicia sesión para acceder a las tablas de la base de datos
-            PAGINA DE GESTION DE USUARIOS DEL JUEGO Y PUNTUACIONES
-            los alts
-            Copyright © 2025 - All right reserved
-            Login
-            Logout
-            Usuario:
-            Mostrar Usuarios
-            Crear usuario
-            Inicio
-            Crear puntuacion
-            Mostrar puntuaciones
-            ¿Nombres de los atributos de las tablas?
+            //GESTION USUARIOS
+            //Inicia sesión para acceder a las tablas de la base de datos
+            //PAGINA DE GESTION DE USUARIOS DEL JUEGO Y PUNTUACIONES
+            los alts {
+                //logo
+                //imagenJuego1-4
+            }
+            //Copyright
+            //All right reserved
+            //Login
+            //Register
+            //Logout
+            //Usuario:
+            //Mostrar Usuarios
+            //Crear usuario
+            //Inicio
+            //Crear puntuacion
+            //Mostrar puntuaciones
+            //Nombres de los atributos de las tablas
             Mensajes de session
             Alertas antes de antes de borrar y editar
-            Detalles del Usuario
-            Detalles de la Puntuación
+            //Detalles del Usuario
+            //Detalles de la Puntuación
     }
 }
 Hacer responsive {

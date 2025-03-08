@@ -23,7 +23,7 @@
                 <thead>
                     <tr>
                         @foreach($campos as $campo)
-                            <th>{{$campo}}</th>
+                            <th>{{ __($campo) }}</th>
                         @endforeach
                         <th></th><th></th><th></th>
                     </tr>

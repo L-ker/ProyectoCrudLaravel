@@ -6,7 +6,7 @@
                 <div class="grid grid-cols-2 gap-4">
                     <!-- Campo puntuaciones -->
                     <div>
-                        <x-input-label for="puntuacion" value="Puntuación"/>
+                        <x-input-label for="puntuacion" value="{{__('puntuacion')}}"/>
                         <x-text-input id="puntuacion" class="block mt-1 w-full" type="text" name="puntuacion" value="{{ old('puntuacion') }}"/>
                         @error("puntuacion")
                             <div class="text-sm text-red-600">{{$message}}</div>
@@ -15,7 +15,7 @@
 
                     <!-- Campo usuarios_id -->
                     <div>
-                        <x-input-label for="usuarios_id" value="Usuario"/>
+                        <x-input-label for="usuarios_id" value="{{ __('usuario') }}"/>
                         <select id="usuarios_id" name="usuarios_id" class="block mt-1 w-full dark:bg-gray-900">
                             @foreach($usuarios as $usuario)
                                 <option value="{{ $usuario->id }}">
