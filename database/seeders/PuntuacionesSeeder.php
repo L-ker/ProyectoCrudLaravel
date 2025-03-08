@@ -4,17 +4,16 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Usuarios;
+use App\Models\Puntuaciones;
 
 
-class UsuarioSeeder extends Seeder
+class PuntuacionesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Usuarios::factory()->count(25)->create();
+        Puntuaciones::factory()->count(60)->create();
     }
 }
-

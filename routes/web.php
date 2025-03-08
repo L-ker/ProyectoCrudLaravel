@@ -14,6 +14,7 @@ Route::resource('usuarios', UsuariosController::class)
 ->middleware('auth');
 
 Route::resource('puntuaciones', PuntuacionesController::class)
+->parameter('puntuaciones', 'puntuacion')
 ->middleware('auth');
 
 Route::fallback(function(){

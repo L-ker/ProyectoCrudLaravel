@@ -11,6 +11,6 @@ class Usuarios extends Model
     public $fillable=["nombre","usuario","email","password"];
 
     public function puntuaciones(){
-        return $this->hasMany(Idioma::class);
+        return $this->hasMany(Puntuaciones::class);
     }
 }

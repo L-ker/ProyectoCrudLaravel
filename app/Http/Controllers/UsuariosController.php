@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\StoreUsuarioRequest;
+use App\Http\Requests\UpdateUsuarioRequest;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
@@ -33,28 +35,19 @@ class UsuariosController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreUsuarioRequest $request)
     {
-        // $datos = $request->only("nombre","email","f_nac","dni");
-        // $alumno = new Alumno($datos);
-        // $alumno->save();
 
-        // if ($request->has("idiomas")){
-        //     foreach ($request->idiomas as $idioma_hablado){
-        //         $idioma = new Idioma();
-        //         $idioma->alumno_id= $alumno->id;
-        //         $idioma->idioma = $idioma_hablado;
-        //         $idioma->nivel = $request->nivel[$idioma_hablado];
-        //         $idioma->titulo = $request->titulo[$idioma_hablado];
-        //         $idioma->save();
-        //     }
-        // }
+        $request->merge([
+            'password' => Crypt::encryptString($request->password) 
+        ]);
 
-        // $alumno->save();
-        // session()->flash("mensaje","Alumno $alumno->nombre registrado");
+        $usuario = new Usuarios($request->input());
 
-        // return redirect()->route('alumnos.index');
-        // //
+        $usuario->save();
+        session()->flash("mensaje","El usuario $usuario->nombre ha sido registrado");
+
+        return redirect()->route('usuarios.index');
     }
 
     /**
@@ -76,24 +69,12 @@ class UsuariosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Usuarios $usuario)
+    public function update(UpdateUsuarioRequest $request, Usuarios $usuario)
     {
-        $validator = Validator::make($request->all(), [
-            'nombre' => 'required|string|max:50',
-            'usuario' => 'required|string|max:25|unique:usuarios,usuario,' . $usuario->id, 
-            'email' => 'required|email|max:320|unique:usuarios,email,' . $usuario->id, 
-            'password' => 'required|string|min:8', 
-        ]);
-
-        if ($validator->fails()) {
-            return redirect()->route('usuarios.edit', $usuario->id)
-                ->withErrors($validator)
-                ->withInput();
-        }
-
         $request->merge([
             'password' => Crypt::encryptString($request->password) 
         ]);
+
         $usuario->update($request->input());
         session()->flash("mensaje","El usuario $usuario->nombre ha sido actualizado");
         return redirect()->route('usuarios.index');
@@ -105,7 +86,7 @@ class UsuariosController extends Controller
     public function destroy(Usuarios $usuario)
     {
         $usuario->delete();
-        session()->flash("mensaje","Alumno $usuario->nombre eliminado");
+        session()->flash("mensaje","EL usuario $usuario->nombre ha sido eliminado");
         return redirect()->route('usuarios.index');
     }
 }

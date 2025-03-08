@@ -24,18 +24,21 @@ Casi acabado el edit-update de usuarios
 
 Visualmente arreglado el edit al menos en gran medida, he añadido la comprobacion de los datos por parte del servidor con el validator que proporciona laravel que tambien debo usar en el store
 
-TODO:
-Acabar metodos del controlador de usuarios (de este revisar lo que esta hecho tambien) y puntuaciones y sus respectivas paginas
-migracion, seeder y factory de puntuaciones
-mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
-en el edit asegurarse de añadir sweet alert
-comprobar que esta bien el tema de la relacion 1/N
-Recordar validar que los campos no esten vacios, un regex por ejemplo
-Añadir variables de sesion con mensajes a insertar y actualizar
-añadir el tema de los idiomas
-HACER LA VERSION DE MOVIL, TODAVIA NO ES RESPONSIVE DEL TODO
-Comprobar validator update
+He cambiado de validar con el Validator a usar las request porque me parece mas correcto y ademas puedes editar los mensajes de manera facil. Tambien he añadido el sweet alert a editar 
 
-para decryptear contraseñas:
-use Illuminate\Support\Facades\Crypt;
-$password = Crypt::decryptString($usuario->password);
+Migracion,seeder y factory de puntuaciones hecho. Index de puntuaciones hecho,
+
+TODO:
+3 idiomas
+ Hacer responsive {
+    mejorar el home (header, cambiar el nav cuando esten las paginas de usuarios y que solo salga si estas registrado, footer) y usuarios.index
+}
+Relacionado con la tabla 1/n {
+    Acabar metodos del controlador de usuarios (de este revisar lo que esta hecho tambien) y puntuaciones y sus respectivas paginas
+
+    para decryptear contraseñas:
+    use Illuminate\Support\Facades\Crypt;
+    $password = Crypt::decryptString($usuario->password);    
+}
+Metodos de ver para en los que se muestre relacionadas las tablas
+Api a ser posible
